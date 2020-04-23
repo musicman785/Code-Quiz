@@ -9,22 +9,24 @@
 </head>
 
 <body> 
-    
+    <!-- Introduction sectionFirst page user sees. Contains quiz start button-->
     <section id="loading-page">
         <p>Hello and welcome to my quiz. Lets see how well you know me. When you are ready to start hit the start button
             to begin. Good Luck!</p>
         <br>
         <button id="start">Start Quiz! You Idiot.</button>
     </section>
-
+    <!-- Quiz section. Has quiz questions and answer buttons. -->
     <section id= "begin-quiz" style="display: none;">
         <div id="quiz">
             <div id="question">
+                <!-- p displays current quiz question. -->
                 <P>Questions</P>
             </div>
+            <!-- quiz timer display set to 20 seconds -->
             <div id="counter">20</div>
         </div>
-
+        <!-- user choices buttons -->
         <div id="choices">
             <button id="A" value="A">A</button>
             <br><br>
@@ -33,10 +35,21 @@
             <button id="C" value="C">C</button>
         </div>
     </section>
-     <!-- <p>Score: <span id="score-counter">0</span></p>  -->
-    <!-- <div id="scoreContainer">
-        <p>50%</p>
-    </div> -->
+        <!-- This section displays user score -->
+    <section id="final-score" style="display: none;">
+     <p>Score: <span id="score-counter">0</span></p>
+     <!-- form used for user initials -->
+     <form>
+        <label for="fname">Initials:</label><br>
+        <input type="text" id="#initials" name="fname" value="John"><br>
+        <!-- user initials and score submit button -->
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+    </section>
+    <!-- displays high local storage high-score. -->
+    <section id="high-score" style="display: none;">
+    </section>
     <script src="./assets/javascript/script.js"></script>
 </body>
 

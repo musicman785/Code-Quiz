@@ -17,6 +17,8 @@ var loadingPage = document.getElementById("loading-page");
 
 var quizEl = document.getElementById("begin-quiz");
 
+var finalScore = document.getElementById("final-score");
+
 
 // Question set for user
 var questions = [
@@ -66,17 +68,16 @@ var time = 20;
 
 // variables for accessing questions from index position
 var currentQuesIndex = 0;
-// var userQ = questions[0]
 
 
 // need a function to display questions
 function showQuestion() {
- // quiz questions along with possible answers
+    // quiz questions along with possible answers
     questionEl.innerHTML = questions[currentQuesIndex].question;
     answerA.innerHTML = questions[currentQuesIndex].choiceA;
     answerB.innerHTML = questions[currentQuesIndex].choiceB;
     answerC.innerHTML = questions[currentQuesIndex].choiceC;
-    
+
 };// Tumer function set to 20 sec
 function setTime() {
     var timerInterval = setInterval(function () {
@@ -90,30 +91,45 @@ function setTime() {
     }, 1000);
 }
 //Function to begin quiz after user clicks start button, also where timer and display questions are called
-function  beginQuiz() {
+function beginQuiz() {
     loadingPage.style.display = "none";
     showQuestion();
     setTime();
     quizEl.style.display = "block";
 }
 
-function nextQuestion(event){ 
-    
-   
 
-if (event.target.value === questions[currentQuesIndex].correctAns){
-    score++; console.log(score++);
-}
-   
-   
-   
-   
-    if (currentQuesIndex < questions.length -1){
+
+// function to take user to next question
+
+function nextQuestion(event) {
+        console.log(currentQuesIndex);
+
+    // need a conditional statement to identify if user answers are correct or not. //
+    if (event.target.value === questions[currentQuesIndex].correctAns) {
+        score++;
+    }
+
+    if (currentQuesIndex < questions.length) {
         currentQuesIndex++;
 
-    } 
+    } if (currentQuesIndex === questions.length) {
+
+        quizEl.style.display = "none";
+
+        quizResults();
+        return;
+
+    }
     showQuestion();
-} 
+}
+function quizResults() {
+    document.getElementById("score-counter").textContent = score;
+    finalScore.style.display = "block";
+
+}
+
+// create a button that will capture the value of the of which answer the user clicks on. each time an answer is made. capture the value of answer A, B, C variables.
 answerA.addEventListener("click", nextQuestion)
 
 
@@ -124,18 +140,6 @@ answerC.addEventListener("click", nextQuestion)
 
 
 
-// function showEachQuestion() {
-//     for (var i = 0; i > quesIndex; i++) {
-//         var userQ = questions[i];
-//         showQuestion(userQ);
-
-//         var button = document.createElement("button");
-//         button.textContent = "choose";
-
-
-//     }
-// }
-// create a button that will capture the value of the of which answer the user clicks on. each time an answer is made. capture the value of answer A, B, C variables.
 
 
 
@@ -145,7 +149,7 @@ answerC.addEventListener("click", nextQuestion)
 
 
 
-// need a conditional statement to identify if user answers are correct or not. //
+
 
 
 
@@ -153,4 +157,4 @@ answerC.addEventListener("click", nextQuestion)
 // questions will have 5 seconds to be answered
 // var quesTimeLimit = 5;
 
-// Timer function
+
