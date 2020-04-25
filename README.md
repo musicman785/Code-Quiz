@@ -13,3 +13,7 @@ After setting up initial page layout and some really basic css, I began the js c
 Had to change some html code to accomodate the "start quiz" button. My goal is to have a first page that simply shows the "start quiz" button and the introduction. I accomplished this by creating 3 sections. Each section (start quiz, question portion, and final score) will execute after the previous section is completed. This achieved the effect of seeming to have 3 separate pages. 
 
 Biggest issue is trying to attach the click events to the proper answers. Got lost in so many variables made it difficult to connect with what I wanted. Will begin work on the timer and user score next.
+
+Final Method: 
+
+Added an image file and folder for the jpeg used as a background. Css was completely done without bootstrap even though the css code is not very complicated. Js code was the most difficult. Can be cleaned up more for sure, however It finctions properly and runs the code properly and records scores to local storage properly. 
