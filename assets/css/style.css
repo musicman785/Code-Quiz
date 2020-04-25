@@ -1,9 +1,14 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background: #d6d6d6;
     text-align: center;
     padding: 20px 0px;
     font-size: 24px;
+}
+
+body {
+    background-image: url("../images/lake-hawea.jpg") ;
+    background-size: 100% auto;
+    background-attachment: fixed;
 }
 
 #loading-page {
@@ -22,9 +27,65 @@
  padding-block: 20px;
  font-size: 100px;
  border-radius: 10px;
- text;
  -webkit-box-shadow: 0px 6px 0px #2b638f;
 -moz-box-shadow: 0px 6px 0px #2b638f;
 box-shadow: 0px 6px 0px black; 
 -webkit-transform: rotateX(40deg);
 }
+
+#A {
+    cursor: pointer;
+ color: whitesmoke;
+ font-weight: 700;
+ background-color: teal;
+ padding-block: 20px;
+ font-size: 50px;
+ border-radius: 10px;
+ -webkit-box-shadow: 0px 6px 0px #2b638f;
+-moz-box-shadow: 0px 6px 0px #2b638f;
+box-shadow: 0px 6px 0px black; 
+-webkit-transform: rotateX(40deg);
+}
+
+#B {
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+    background-color: limegreen;
+    padding-block: 20px;
+    font-size: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 0px #2b638f;
+   -moz-box-shadow: 0px 6px 0px #2b638f;
+   box-shadow: 0px 6px 0px black; 
+   -webkit-transform: rotateX(40deg);
+}
+
+#C {
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+    background-color:magenta;
+    padding-block: 20px;
+    font-size: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 0px #2b638f;
+   -moz-box-shadow: 0px 6px 0px #2b638f;
+   box-shadow: 0px 6px 0px black; 
+   -webkit-transform: rotateX(40deg);
+}
+
+
+#submit {
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+    background-color:red;
+    padding-block: 20px;
+    font-size: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 0px #2b638f;
+   -moz-box-shadow: 0px 6px 0px #2b638f;
+   box-shadow: 0px 6px 0px black; 
+   -webkit-transform: rotateX(40deg);
+} 
