@@ -94,7 +94,7 @@ function setTime() {
         if (time === 0) {
             clearInterval(timerInterval);
             quizEl.style.display = "none";
-            quizResults();
+            // quizResults();
 
         }
 

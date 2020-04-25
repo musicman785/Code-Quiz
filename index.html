@@ -13,8 +13,9 @@
     <section id="loading-page">
         <p>Hello and welcome to my quiz. Lets see how well you know me. When you are ready to start hit the start button
             to begin. Good Luck!</p>
-        <br>
-        <button id="start">Start Quiz! You Idiot.</button>
+        <br> 
+        <!-- Button begins quiz -->
+        <button id="start">Start Quiz!</button>
     </section>
     <!-- Quiz section. Has quiz questions and answer buttons. -->
     <section id="begin-quiz" style="display: none;">
@@ -48,8 +49,10 @@
         </div>
     </section>
     <!-- displays high local storage high-score. -->
-    <section id="high-score" style="display: none;"><button id= "" type="button" onClick="refreshPage()">Try Again</button>
-        <button id= "" type="button" onClick="clearPage()">Clear Table and Start Over</button>
+    <section id="high-score" style="display: none;"><button id= "try-again" type="button" onClick="refreshPage()">Try Again</button>
+        <br>
+        <br>
+        <button id= "clear-scores" type="button" onClick="clearPage()">Clear Table and Start Over</button>
     </section>
     <script src="./assets/javascript/script.js"></script>
 </body>
